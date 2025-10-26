@@ -36,6 +36,7 @@
   justify-content: center;
   gap: 12px;
   font-size: 24px;
+  flex-wrap: wrap;
 }
 
 .contactForm {
@@ -173,7 +174,77 @@
 }
 
 .instagramHandle:hover {
-  color: #F97316; /* naranja */
+  color: #F97316;
   transform: scale(1.1);
   text-decoration: none;
+}
+
+/* 📱 Tablets */
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 24px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .input,
+  .textarea {
+    font-size: 15px;
+  }
+
+  .submitButton {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+
+  .instagramHandle {
+    font-size: 20px;
+  }
+}
+
+/* 📱 Móviles */
+@media (max-width: 480px) {
+  .contact {
+    padding: 40px 16px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .contactContent {
+    gap: 24px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .input,
+  .textarea {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .submitButton {
+    font-size: 15px;
+    padding: 12px 24px;
+  }
+
+  .instagramHandle {
+    font-size: 18px;
+  }
+
+  .instagramIcon {
+    width: 24px;
+    height: 24px;
+  }
 }

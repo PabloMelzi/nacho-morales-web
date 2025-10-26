@@ -49,7 +49,7 @@ const Plans = () => {
               <div className={styles.buttons}>
                 <a
                   href="pdfs/Guía estratégica Isométricos, excéntricos y trabajo anti-rotacional-1.pdf"
-                  download="Guía_estratégica_Isométricos_excé[email protected]_rotacional.pdf"
+                  download="pdfs/Guía estratégica Isométricos, excéntricos y trabajo anti-rotacional-1.pdf"
                   className={styles.downloadBtn}
                 >
                   Descargar PDF
