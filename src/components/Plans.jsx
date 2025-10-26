@@ -58,7 +58,7 @@ const Plans = () => {
             </div>
 
             <div className={styles.pdfItem}>
-              <h3 className={styles.subtitle}>Los 3 ejercicios para deportistas con dolor</h3>
+              <h3 className={styles.subtitle}>Los 3 ejercicios demovilidad para deportistas con dolor</h3>
               <div className={styles.buttons}>
                 <a
                   href="png/RESET Ejercicios Movilidad (1).png"
