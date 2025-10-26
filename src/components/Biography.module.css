@@ -1,0 +1,151 @@
+.biography {
+  background-color: #111;
+  color: #F97316; /* naranja */
+  padding: 80px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.textBox {
+  border: 3px solid #F97316; /* borde naranja */
+  padding: 40px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(249, 115, 22, 0.2);
+  position: relative;
+}
+
+.textBox::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 30px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 0 10px white;
+  animation: runAroundBorder 2s linear infinite;
+}
+
+.textBox::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(17, 17, 17, 0.95);
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
+  color: #F97316;
+  margin-bottom: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 28px;
+  font-weight: bold;
+  color: #F97316;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.question {
+  font-size: 22px;
+  font-weight: 600;
+  color: #F97316;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #F97316;
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+.quote {
+  font-size: 18px;
+  font-style: italic;
+  color: #F97316;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  border-top: 2px solid #F97316;
+  border-bottom: 2px solid #F97316;
+  font-weight: 500;
+}
+
+@keyframes runAroundBorder {
+  0% {
+    top: -4px;
+    left: -4px;
+    width: 30px;
+    height: 4px;
+  }
+  24% {
+    top: -4px;
+    left: calc(100% - 26px);
+    width: 30px;
+    height: 4px;
+  }
+  25% {
+    top: -4px;
+    left: calc(100% + 0px);
+    width: 4px;
+    height: 30px;
+  }
+  49% {
+    top: calc(100% - 26px);
+    left: calc(100% + 0px);
+    width: 4px;
+    height: 30px;
+  }
+  50% {
+    top: calc(100% + 0px);
+    left: calc(100% + 0px);
+    width: 30px;
+    height: 4px;
+  }
+  74% {
+    top: calc(100% + 0px);
+    left: 4px;
+    width: 30px;
+    height: 4px;
+  }
+  75% {
+    top: calc(100% + 0px);
+    left: -4px;
+    width: 4px;
+    height: 30px;
+  }
+  99% {
+    top: 4px;
+    left: -4px;
+    width: 4px;
+    height: 30px;
+  }
+  100% {
+    top: -4px;
+    left: -4px;
+    width: 30px;
+    height: 4px;
+  }
+}

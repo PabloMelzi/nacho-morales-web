@@ -1,0 +1,682 @@
+.plans {
+  background-color: #111;
+  color: #F97316;
+  padding: 80px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modalBtn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid #F97316;
+  background-color: transparent;
+  color: #F97316;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none !important;       /* IMPORTANTE */
+  box-shadow: none !important;    /* IMPORTANTE */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.modalBtn:hover {
+  background-color: #F97316;
+  color: #111;
+  border: 2px solid #F97316;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.modalButtons {
+  display: flex;
+  justify-content: center; /* centra los botones */
+  gap: 16px; /* espacio entre los botones */
+  margin-top: 20px; /* opcional para separar del contenido de la modal */
+}
+
+.modalBtn:focus,
+.modalBtn:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid #F97316;
+}
+/* Centrar todo el contenido de Premium */
+.premiumBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrado horizontal */
+  text-align: center;  /* Centrar texto */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: #fff; /* o el fondo que quieras */
+  border-radius: 12px;
+  padding: 20px;
+  border: 2px solid #F97316;
+  max-width: 600px;
+  margin: 20px auto; /* Centramos el div completo en la página */
+}
+
+/* Hover elegante */
+.premiumBox:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Letras Premium con reflejo animado */
+.title.premiumTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  color: #F97316;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* Letras Premium con reflejo solo en el texto */
+.title.premiumTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  color: #F97316;
+  background: linear-gradient(
+    120deg,
+    #F97316 0%,
+    #fff 50%,
+    #F97316 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineText 5s infinite linear;
+}
+
+/* Animación del brillo sobre las letras */
+@keyframes shineText {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+
+@keyframes shine {
+  0% { left: -75%; }
+  50% { left: 125%; }
+  100% { left: 125%; }
+}
+
+
+.downloadBtn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid #F97316;
+  background-color: transparent; /* color base */
+  color: #F97316;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  
+  outline: none;          /* quitar borde por focus */
+  box-shadow: none;       /* quitar sombra azul */
+  appearance: none;       /* quitar estilos por defecto */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.downloadBtn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid #F97316;
+  background-color: transparent;
+  color: #F97316;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+}
+
+.downloadBtn:hover,
+.downloadBtn:active {
+  background-color: #F97316;
+  color: #111;
+}
+.downloadBtn, .payBtn, .cancelBtn {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  border: 2px solid #F97316;
+  background-color: transparent;
+  color: #F97316;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.downloadBtn:hover, .payBtn:hover, .cancelBtn:hover {
+  background-color: #F97316;
+  color: #111;
+}
+
+.downloadBtn:focus, .payBtn:focus, .cancelBtn:focus,
+.downloadBtn:active, .payBtn:active, .cancelBtn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17,17,17,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.downloadBtn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid #F97316; /* tu borde naranja */
+  background-color: transparent;
+  color: #F97316;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.modalBtn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid #F97316; /* borde naranja */
+  background-color: transparent;
+  color: #F97316;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* hover normal */
+.modalBtn:hover {
+  background-color: #F97316;
+  color: #111;
+  border: 2px solid #F97316; /* mantener borde igual */
+  outline: none;
+  box-shadow: none;
+}
+
+/* focus y active */
+.modalBtn:focus,
+.modalBtn:active {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid #F97316;
+}
+
+/* hover normal */
+.downloadBtn:hover {
+  background-color: #F97316;
+  color: #111;
+  border: 2px solid #F97316; /* asegurar que el borde no cambie */
+  outline: none;
+  box-shadow: none;
+}
+.codeInput {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #F97316;
+  margin-bottom: 16px;
+  font-size: 16px;
+  outline: none;
+}
+
+.codeInput:focus {
+  border-color: #F97316;
+  box-shadow: none;
+}
+.modalBtn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid #F97316;
+  background-color: transparent;
+  color: #F97316;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+  box-shadow: none;
+  margin-right: 10px;
+}
+
+.modalBtn:hover {
+  background-color: #F97316;
+  color: #111;
+  border: 2px solid #F97316;
+}
+
+.codeInput {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #F97316;
+  font-size: 16px;
+  outline: none;
+}
+
+.codeInput:focus {
+  border-color: #F97316;
+  box-shadow: none;
+}
+
+/* focus y active */
+.downloadBtn:focus,
+.downloadBtn:active {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid #F97316;
+}
+
+
+.modal {
+  background: #111;
+  color: #F97316;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  border: 3px solid #F97316;
+}
+
+.modalButtons {
+  margin-top: 20px;
+}
+
+
+/* 🔹 Quitar focus ring */
+.downloadBtn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* 🔹 Chrome/Edge: si quieres que no aparezca nunca */
+.downloadBtn::-moz-focus-inner {
+  border: 0;
+}
+
+.downloadBtn:hover,
+.downloadBtn:focus,
+.downloadBtn:active {
+  background-color: #F97316; /* color naranja al interactuar */
+  color: #111;               /* texto */
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.downloadBtn, .payBtn, .cancelBtn {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  border: 2px solid #F97316;
+  background: transparent;
+  color: #F97316;
+  transition: all 0.3s;
+  outline: none; /* quita outline */
+}
+.downloadBtn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid #F97316;
+  background: transparent;
+  color: #F97316;
+  font-weight: 600;
+  text-decoration: none; /* importante para <a> */
+  cursor: pointer;
+  transition: all 0.3s;
+
+  outline: none; /* quitar outline por defecto */
+  box-shadow: none; /* quitar cualquier sombra azul que aparezca */
+}
+
+.downloadBtn:hover,
+.downloadBtn:focus,
+.downloadBtn:active {
+  background-color: #F97316;
+  color: #111;
+  outline: none !important; /* refuerzo */
+  box-shadow: none !important; /* refuerzo */
+  text-decoration: none;
+}
+
+.downloadBtn:hover, .payBtn:hover, .cancelBtn:hover {
+  background-color: #F97316;
+  color: #111;
+}
+
+/* ⚡ quitar borde azul por focus/click */
+.downloadBtn:focus, .downloadBtn:active,
+.payBtn:focus, .payBtn:active,
+.cancelBtn:focus, .cancelBtn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.textBox {
+  border: 3px solid #F97316;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(249, 115, 22, 0.2);
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.textBox::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 30px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 0 10px white;
+  animation: runAroundBorder 2s linear infinite;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
+  color: #F97316;
+  margin-bottom: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #F97316;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.pdfContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pdfItem {
+  background-color: rgba(17, 17, 17, 0.95);
+  border: 2px solid #F97316;
+  border-radius: 12px;
+  padding: 20px;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pdfItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(249, 115, 22, 0.4);
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #F97316;
+  margin-bottom: 20px;
+}
+
+.downloadBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #F97316;
+  border-radius: 6px;
+  color: #F97316;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.downloadBtn:hover {
+  background-color: #F97316;
+  color: #111;
+  transform: scale(1.05);
+}
+
+/* 🔹 SECCIÓN PREMIUM */
+.premiumBox {
+  border: 3px solid #FBBF24; /* dorado */
+  background: linear-gradient(145deg, #1a1a1a 0%, #111 60%, #2d2d2d 100%);
+  box-shadow: 0 0 25px rgba(251, 191, 36, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.premiumTitle {
+  color: #FBBF24;
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+}
+
+.premiumHighlight {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.premiumQuote {
+  font-size: 18px;
+  font-style: italic;
+  color: #FBBF24;
+  border-top: 2px solid #FBBF24;
+  border-bottom: 2px solid #FBBF24;
+  padding: 12px;
+  display: inline-block;
+}
+
+.pdfItemPremium {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #FBBF24;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 0 12px rgba(251, 191, 36, 0.4);
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.pdfItemPremium:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(251, 191, 36, 0.6);
+}
+
+.downloadBtnPremium {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 2px solid #FBBF24;
+  border-radius: 6px;
+  color: #FBBF24;
+  text-decoration: none;
+  font-weight: 600;
+  background: transparent;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.downloadBtnPremium:hover {
+  background-color: #FBBF24;
+  color: #111;
+  transform: scale(1.05);
+}
+
+/* Halo animado */
+.glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(251,191,36,0.2) 0%, transparent 70%);
+  animation: pulse 4s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.1); }
+}
+
+/* Animación borde */
+@keyframes runAroundBorder {
+  0% { top: -4px; left: -4px; width: 30px; height: 4px; }
+  24% { top: -4px; left: calc(100% - 26px); width: 30px; height: 4px; }
+  25% { top: -4px; left: calc(100% + 0px); width: 4px; height: 30px; }
+  49% { top: calc(100% - 26px); left: calc(100% + 0px); width: 4px; height: 30px; }
+  50% { top: calc(100% + 0px); left: calc(100% + 0px); width: 30px; height: 4px; }
+  74% { top: calc(100% + 0px); left: 4px; width: 30px; height: 4px; }
+  75% { top: calc(100% + 0px); left: -4px; width: 4px; height: 30px; }
+  99% { top: 4px; left: -4px; width: 4px; height: 30px; }
+  100% { top: -4px; left: -4px; width: 30px; height: 4px; }
+}
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  background: #111;
+  border: 3px solid #F97316;
+  border-radius: 12px;
+  padding: 30px;
+  color: #F97316;
+  box-shadow: 0 0 20px rgba(249,115,22,0.3);
+  text-align: center;
+  max-width: 400px;
+}
+
+.payBtn, .cancelBtn {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  border: 2px solid #F97316;
+  background: transparent;
+  color: #F97316;
+  transition: all 0.3s;
+}
+
+.payBtn:hover {
+  background-color: #F97316;
+  color: #111;
+}
+
+.cancelBtn:hover {
+  background-color: #333;
+  color: #F97316;
+}
+
+/* Botón premium */
+.downloadBtnPremium {
+  padding: 10px 20px;
+  border: 2px solid #F97316;
+  border-radius: 6px;
+  color: #F97316;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.downloadBtnPremium:hover {
+  background-color: #F97316;
+  color: #111;
+}
+.payBtn, .cancelBtn, .downloadBtn {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  border: 2px solid #F97316;
+  background: transparent;
+  color: #F97316;
+  transition: all 0.3s;
+  outline: none; /* 👈 esto quita el borde azul al hacer hover/click */
+}
+
+.payBtn:hover, .downloadBtn:hover, .cancelBtn:hover {
+  background-color: #F97316;
+  color: #111;
+}
+.downloadBtn, .payBtn, .cancelBtn {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  border: 2px solid #F97316;
+  background: transparent;
+  color: #F97316;
+  transition: all 0.3s;
+  outline: none; /* quita outline */
+}
+
+.downloadBtn:hover, .payBtn:hover, .cancelBtn:hover {
+  background-color: #F97316;
+  color: #111;
+}
+
+/* ⚡ quitar borde azul por focus/click */
+.downloadBtn:focus, .downloadBtn:active,
+.payBtn:focus, .payBtn:active,
+.cancelBtn:focus, .cancelBtn:active {
+  outline: none;
+  box-shadow: none;
+}

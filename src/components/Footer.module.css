@@ -1,0 +1,14 @@
+.footer {
+  background-color: #F97316; /* naranja */
+  color: white;
+  text-align: center;
+  padding: 20px 32px;
+  margin-top: auto;
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}

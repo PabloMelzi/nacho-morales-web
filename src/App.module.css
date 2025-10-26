@@ -1,0 +1,33 @@
+.app {
+  background-color: #111;
+  color: white;
+  min-height: 100vh;
+  width: 100vw; /* Asegura el ancho completo del viewport */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.section {
+  background-color: #111;
+  color: #F97316;
+  padding: 80px 32px;
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section h2 {
+  font-size: 48px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
