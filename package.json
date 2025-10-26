@@ -2,6 +2,7 @@
   "name": "nacho-morales-web",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://PabloMelzi.github.io/nacho-morales-web",
   "type": "module",
   "scripts": {
     "dev": "vite",
