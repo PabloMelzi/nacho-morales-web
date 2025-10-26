@@ -6,7 +6,6 @@ const Biography = () => {
     <section id="biografia" className={styles.biography}>
       <div className={styles.container}>
         <div className={styles.textBox}>
-          <h2 className={styles.title}>Tu Juego, Tu Entreno</h2>
           <h3 className={styles.subtitle}>Bienvenido</h3>
           
           <h4 className={styles.question}>¿Quién va a entrenarte?</h4>
