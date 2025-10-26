@@ -9,7 +9,7 @@ const Plans = () => {
 
   const downloadPDF = () => {
     const link = document.createElement('a');
-    link.href = '/pdfs/14 DÍAS FUERZA_SALTO (1).pdf';
+    link.href = 'pdfs/14 DÍAS FUERZA_SALTO (1).pdf';
     link.download = '14_DIAS_FUERZA_SALTO.pdf';
     document.body.appendChild(link);
     link.click();
@@ -48,7 +48,7 @@ const Plans = () => {
               </h3>
               <div className={styles.buttons}>
                 <a
-                  href="/pdfs/Guía estratégica Isométricos, excéntricos y trabajo anti-rotacional-1.pdf"
+                  href="pdfs/Guía estratégica Isométricos, excéntricos y trabajo anti-rotacional-1.pdf"
                   download="Guía_estratégica_Isométricos_excé[email protected]_rotacional.pdf"
                   className={styles.downloadBtn}
                 >
@@ -61,7 +61,7 @@ const Plans = () => {
               <h3 className={styles.subtitle}>Los 3 ejercicios para deportistas con dolor</h3>
               <div className={styles.buttons}>
                 <a
-                  href="/png/RESET Ejercicios Movilidad (1).png"
+                  href="png/RESET Ejercicios Movilidad (1).png"
                   download="RESET_Ejercicios_Movilidad.png"
                   className={styles.downloadBtn}
                 >
